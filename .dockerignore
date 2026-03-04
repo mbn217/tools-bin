@@ -1,0 +1,9 @@
+node_modules
+client/node_modules
+server/node_modules
+client/dist
+*.log
+.DS_Store
+.git
+.gitignore
+README.md

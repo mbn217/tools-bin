@@ -5,8 +5,17 @@ import { fetchTranscript } from 'youtube-transcript-plus';
 const app = express();
 const PORT = 3001;
 
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 app.use(cors());
 app.use(express.json());
+
+// In production, serve the built React frontend
+const clientDist = path.join(__dirname, '..', 'client', 'dist');
+app.use(express.static(clientDist));
 
 const HTML_ENTITIES = {
   '&amp;': '&',
@@ -108,6 +117,11 @@ app.post('/api/transcript', async (req, res) => {
   }
 });
 
+// SPA fallback: serve index.html for all non-API routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(clientDist, 'index.html'));
+});
+
 app.listen(PORT, () => {
-  console.log(`Tools Bin API running on http://localhost:${PORT}`);
+  console.log(`Tools Bin running on http://localhost:${PORT}`);
 });
