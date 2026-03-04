@@ -1,5 +1,6 @@
 import { useState, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import SEO from '../components/SEO';
 import {
   ClipboardPaste,
   Loader2,
@@ -138,6 +139,21 @@ export default function YouTubeTranscript() {
 
   return (
     <div className="max-w-4xl">
+      <SEO
+        title="YouTube Transcript Extractor"
+        description="Extract transcripts from any YouTube video for free. Download as plain text, SRT subtitles, timestamped text, or JSON. No sign-up required."
+        path="/youtube-transcript"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'WebApplication',
+          name: 'YouTube Transcript Extractor',
+          url: 'https://toolsbin.dev/youtube-transcript',
+          description: 'Extract transcripts from any YouTube video. Download as plain text, SRT, timestamped, or JSON.',
+          applicationCategory: 'UtilitiesApplication',
+          operatingSystem: 'Any',
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        }}
+      />
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}

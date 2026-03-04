@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import { Copy, Check, RefreshCw, ArrowDownUp } from 'lucide-react';
 
 function formatParts(d) {
@@ -101,6 +102,11 @@ export default function TimestampConverter() {
 
   return (
     <div className="max-w-4xl">
+      <SEO
+        title="Unix Timestamp Converter"
+        description="Convert Unix timestamps to human-readable dates and vice versa. Supports seconds, milliseconds, ISO 8601, UTC, and relative time formats."
+        path="/timestamp-converter"
+      />
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}

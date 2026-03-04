@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import { Copy, Check, RefreshCw } from 'lucide-react';
 
 function hexToRgb(hex) {
@@ -138,6 +139,11 @@ export default function ColorPicker() {
 
   return (
     <div className="max-w-4xl">
+      <SEO
+        title="Color Picker & Converter"
+        description="Pick colors and convert between HEX, RGB, HSL, and RGBA formats. Free online color picker with visual sliders and one-click copy."
+        path="/color-picker"
+      />
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}

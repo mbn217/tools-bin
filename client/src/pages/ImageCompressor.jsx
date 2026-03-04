@@ -1,5 +1,6 @@
 import { useState, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import SEO from '../components/SEO';
 import {
   Upload,
   Download,
@@ -111,6 +112,11 @@ export default function ImageCompressor() {
 
   return (
     <div className="max-w-4xl">
+      <SEO
+        title="Image Compressor"
+        description="Compress and resize images online for free. Reduce JPEG, PNG, and WebP file sizes without uploading — all processing happens in your browser."
+        path="/image-compressor"
+      />
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}

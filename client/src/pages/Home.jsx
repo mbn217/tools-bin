@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, FileText, Code, Image, Hash, Clock, Palette } from 'lucide-react';
 import ToolCard from '../components/ToolCard';
+import SEO from '../components/SEO';
 
 const allTools = [
   {
@@ -71,6 +72,19 @@ export default function Home() {
 
   return (
     <div>
+      <SEO
+        path="/"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'WebApplication',
+          name: 'Tools Bin',
+          url: 'https://toolsbin.dev',
+          description: 'A free collection of developer tools — YouTube transcript extractor, JSON formatter, image compressor, hash generator, timestamp converter, and color picker.',
+          applicationCategory: 'DeveloperApplication',
+          operatingSystem: 'Any',
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        }}
+      />
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}

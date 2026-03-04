@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import { Copy, Check, FileUp, Type, Trash2 } from 'lucide-react';
 
 const ALGORITHMS = ['SHA-1', 'SHA-256', 'SHA-384', 'SHA-512'];
@@ -64,6 +65,11 @@ export default function HashGenerator() {
 
   return (
     <div className="max-w-4xl">
+      <SEO
+        title="Hash Generator"
+        description="Generate SHA-1, SHA-256, SHA-384, and SHA-512 cryptographic hashes from text or files online. Free, fast, and private — runs entirely in your browser."
+        path="/hash-generator"
+      />
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}

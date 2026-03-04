@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import {
   Copy,
   Check,
@@ -63,6 +64,11 @@ export default function JsonFormatter() {
 
   return (
     <div className="max-w-4xl">
+      <SEO
+        title="JSON Formatter & Validator"
+        description="Free online JSON formatter, beautifier, minifier, and validator. Paste your JSON to format, compress, or validate it instantly."
+        path="/json-formatter"
+      />
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
