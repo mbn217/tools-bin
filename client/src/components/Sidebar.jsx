@@ -3,6 +3,11 @@ import { motion } from 'framer-motion';
 import {
   Home,
   FileText,
+  Code,
+  Image,
+  Hash,
+  Clock,
+  Palette,
   ChevronLeft,
   ChevronRight,
   Wrench,
@@ -11,6 +16,11 @@ import {
 const tools = [
   { name: 'Home', path: '/', icon: Home },
   { name: 'YT Transcript', path: '/youtube-transcript', icon: FileText },
+  { name: 'JSON Formatter', path: '/json-formatter', icon: Code },
+  { name: 'Image Compressor', path: '/image-compressor', icon: Image },
+  { name: 'Hash Generator', path: '/hash-generator', icon: Hash },
+  { name: 'Timestamp', path: '/timestamp-converter', icon: Clock },
+  { name: 'Color Picker', path: '/color-picker', icon: Palette },
 ];
 
 export default function Sidebar({ collapsed, onToggle }) {

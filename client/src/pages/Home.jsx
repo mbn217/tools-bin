@@ -15,41 +15,36 @@ const allTools = [
     name: 'JSON Formatter',
     description: 'Beautify, minify, and validate JSON data with syntax highlighting.',
     icon: Code,
-    path: '#',
+    path: '/json-formatter',
     color: '#f59e0b',
-    comingSoon: true,
   },
   {
     name: 'Image Compressor',
-    description: 'Compress and resize images without losing quality. Supports PNG, JPG, WebP.',
+    description: 'Compress and resize images in the browser. Nothing leaves your machine.',
     icon: Image,
-    path: '#',
+    path: '/image-compressor',
     color: '#10b981',
-    comingSoon: true,
   },
   {
     name: 'Hash Generator',
-    description: 'Generate MD5, SHA-1, SHA-256, and other hash digests from text or files.',
+    description: 'Generate SHA-1, SHA-256, SHA-384, and SHA-512 hash digests from text or files.',
     icon: Hash,
-    path: '#',
+    path: '/hash-generator',
     color: '#8b5cf6',
-    comingSoon: true,
   },
   {
     name: 'Timestamp Converter',
     description: 'Convert between Unix timestamps, ISO dates, and human-readable formats.',
     icon: Clock,
-    path: '#',
+    path: '/timestamp-converter',
     color: '#06b6d4',
-    comingSoon: true,
   },
   {
     name: 'Color Picker',
     description: 'Pick colors and convert between HEX, RGB, HSL, and other color formats.',
     icon: Palette,
-    path: '#',
+    path: '/color-picker',
     color: '#ec4899',
-    comingSoon: true,
   },
 ];
 
@@ -118,13 +113,8 @@ export default function Home() {
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
       >
         {filtered.map((tool) => (
-          <motion.div key={tool.name} variants={item} className="relative">
+          <motion.div key={tool.name} variants={item}>
             <ToolCard {...tool} />
-            {tool.comingSoon && (
-              <div className="absolute top-3 right-3 px-2 py-0.5 bg-surface-100 text-gray-400 text-xs rounded-full font-medium border border-surface-200">
-                Soon
-              </div>
-            )}
           </motion.div>
         ))}
       </motion.div>
