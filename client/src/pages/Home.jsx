@@ -6,7 +6,7 @@ import {
   Regex, Eye, GitCompareArrows, CaseSensitive, AlignLeft,
   Fingerprint, Lock, QrCode, PaintBucket,
   Table, FileJson, Calculator, Ruler,
-  Timer, Database, Globe, Tags,
+  Timer, Database, Globe, Tags, Receipt,
 } from 'lucide-react';
 import ToolCard from '../components/ToolCard';
 import SEO from '../components/SEO';
@@ -66,6 +66,12 @@ const categories = [
       { name: 'SQL Formatter', description: 'Beautify SQL queries with proper indentation.', icon: Database, path: '/sql-formatter', color: '#06b6d4' },
       { name: 'HTTP Status', description: 'Searchable reference for HTTP status codes.', icon: Globe, path: '/http-status', color: '#f59e0b' },
       { name: 'Meta Tag Generator', description: 'Generate SEO meta tags for your website.', icon: Tags, path: '/meta-tag-generator', color: '#ef4444' },
+    ],
+  },
+  {
+    name: 'Business',
+    tools: [
+      { name: 'Invoice Generator', description: 'Create professional invoices and export to PDF, Word, or print.', icon: Receipt, path: '/invoice-generator', color: '#10b981' },
     ],
   },
 ];

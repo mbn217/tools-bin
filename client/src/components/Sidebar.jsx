@@ -6,7 +6,7 @@ import {
   Regex, Eye, GitCompareArrows, CaseSensitive, AlignLeft,
   Fingerprint, Lock, QrCode, PaintBucket,
   Table, FileJson, Calculator, Ruler,
-  Timer, Database, Globe, Tags,
+  Timer, Database, Globe, Tags, Receipt,
   ChevronLeft, ChevronRight, Wrench,
 } from 'lucide-react';
 
@@ -49,6 +49,9 @@ const sections = [
     { name: 'SQL Formatter', path: '/sql-formatter', icon: Database },
     { name: 'HTTP Status', path: '/http-status', icon: Globe },
     { name: 'Meta Tags', path: '/meta-tag-generator', icon: Tags },
+  ]},
+  { label: 'Business', items: [
+    { name: 'Invoice', path: '/invoice-generator', icon: Receipt },
   ]},
 ];
 

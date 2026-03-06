@@ -1,6 +1,6 @@
 # Tools Bin
 
-A free, open-source collection of **26 developer tools** — all in one place. Built with React 18 + Vite on the frontend and Express.js on the backend. Every tool (except YouTube Transcript) runs entirely client-side for maximum privacy and speed.
+A free, open-source collection of **27 developer tools** — all in one place. Built with React 18 + Vite on the frontend and Express.js on the backend. Every tool (except YouTube Transcript) runs entirely client-side for maximum privacy and speed.
 
 ## Quick Start
 
@@ -13,7 +13,7 @@ This starts **both** the frontend (port **5173**) and the backend (port **3001**
 
 Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-## Available Tools (26)
+## Available Tools (27)
 
 ### Core Tools
 | Tool | Description |
@@ -64,6 +64,11 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 | SQL Formatter | Beautify SQL queries with dialect support (MySQL, PostgreSQL, SQLite, T-SQL) |
 | HTTP Status Codes | Searchable reference for all common HTTP response status codes |
 | Meta Tag Generator | Generate SEO meta tags, Open Graph, and Twitter Card HTML |
+
+### Business
+| Tool | Description |
+|------|-------------|
+| Invoice Generator | Create professional invoices with line items, taxes, notes, and export to PDF, Word, or print |
 
 ## Docker
 

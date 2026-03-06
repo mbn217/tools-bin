@@ -12,6 +12,7 @@
     "cronstrue": "^3.13.0",
     "diff": "^8.0.3",
     "framer-motion": "^11.0.0",
+    "html2pdf.js": "^0.14.0",
     "js-yaml": "^4.1.1",
     "lucide-react": "^0.460.0",
     "marked": "^17.0.3",

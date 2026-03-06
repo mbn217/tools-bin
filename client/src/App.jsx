@@ -29,6 +29,7 @@ const CronParser = lazy(() => import('./pages/CronParser'));
 const SqlFormatter = lazy(() => import('./pages/SqlFormatter'));
 const HttpStatus = lazy(() => import('./pages/HttpStatus'));
 const MetaTagGenerator = lazy(() => import('./pages/MetaTagGenerator'));
+const InvoiceGenerator = lazy(() => import('./pages/InvoiceGenerator'));
 
 function PageLoader() {
   return (
@@ -70,6 +71,7 @@ export default function App() {
           <Route path="sql-formatter" element={<SqlFormatter />} />
           <Route path="http-status" element={<HttpStatus />} />
           <Route path="meta-tag-generator" element={<MetaTagGenerator />} />
+          <Route path="invoice-generator" element={<InvoiceGenerator />} />
         </Route>
       </Routes>
     </Suspense>
